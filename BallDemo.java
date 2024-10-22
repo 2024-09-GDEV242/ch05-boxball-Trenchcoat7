@@ -49,25 +49,25 @@ public class BallDemo
         myCanvas.drawLine(550, ground, 550, roof);
 
         // create and show the balls
-        BouncingBall ball = new BouncingBall(50, 50, 16, Color.BLUE, ground, myCanvas);
+        BouncingBall ball = new BouncingBall(50, 50, 16, Color.BLUE, ground, roof, left, right, myCanvas);
         ball.draw();
-        BouncingBall ball2 = new BouncingBall(70, 80, 20, Color.YELLOW, ground, myCanvas);
+        BouncingBall ball2 = new BouncingBall(70, 80, 20, Color.YELLOW, ground, roof, left, right, myCanvas);
         ball2.draw();
-        BouncingBall ball3 = new BouncingBall(110, 80, 20, Color.RED, ground, myCanvas);
+        BouncingBall ball3 = new BouncingBall(60, 80, 20, Color.RED, ground, roof, left, right, myCanvas);
         ball2.draw();
-        BouncingBall ball4 = new BouncingBall(70, 100, 70, Color.GREEN, ground, myCanvas);
+        BouncingBall ball4 = new BouncingBall(70, 50, 110, Color.GREEN, ground, roof, left, right, myCanvas);
         ball2.draw();
-        BouncingBall ball5 = new BouncingBall(70, 80, 20, Color.RED, ground, myCanvas);
+        BouncingBall ball5 = new BouncingBall(70, 80, 100, Color.BLACK, ground, roof, left, right, myCanvas);
         ball2.draw();
-        BouncingBall ball6 = new BouncingBall(70, 80, 20, Color.RED, ground, myCanvas);
+        BouncingBall ball6 = new BouncingBall(70, 80, 90, Color.MAGENTA, ground, roof, left, right, myCanvas);
         ball2.draw();
-        BouncingBall ball7 = new BouncingBall(70, 80, 20, Color.RED, ground, myCanvas);
+        BouncingBall ball7 = new BouncingBall(70, 80, 20, Color.RED, ground, roof, left, right, myCanvas);
         ball2.draw();
-        BouncingBall ball8 = new BouncingBall(70, 80, 20, Color.RED, ground, myCanvas);
+        BouncingBall ball8 = new BouncingBall(70, 80, 20, Color.RED, ground, roof, left, right, myCanvas);
         ball2.draw();
-        BouncingBall ball9 = new BouncingBall(70, 80, 20, Color.RED, ground, myCanvas);
+        BouncingBall ball9 = new BouncingBall(70, 80, 20, Color.RED, ground, roof, left, right, myCanvas);
         ball2.draw();
-        BouncingBall ball10 = new BouncingBall(70, 80, 20, Color.RED, ground, myCanvas);
+        BouncingBall ball10 = new BouncingBall(70, 80, 20, Color.RED, ground, roof, left, right, myCanvas);
         ball2.draw();
 
         // make them bounce
@@ -85,7 +85,7 @@ public class BallDemo
             ball9.move();
             ball10.move();
             // stop once ball has travelled a certain distance on x axis
-            if(ball.getXPosition() >= 550 || ball2.getXPosition() >= 550) {
+            if(ball.getXPosition() >= 550 || ball2.getXPosition() >= 550 || ball3.getXPosition() >= 550 || ball4.getXPosition() >= 550 || ball5.getXPosition() >= 550 || ball6.getXPosition() >= 550 || ball7.getXPosition() >= 550 || ball8.getXPosition() >= 550 || ball9.getXPosition() >= 550 || ball10.getXPosition() >= 550) {
                 finished = true;
             }
         }
