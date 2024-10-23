@@ -17,8 +17,6 @@ import java.awt.geom.*;
 public class BouncingBall
 {
     private static final int GRAVITY = 3;  // effect of gravity
-
-    private int ballDegradation = 2;
     private Ellipse2D.Double circle;
     private Color color;
     private int diameter;
@@ -88,27 +86,27 @@ public class BouncingBall
         xPosition +=2;
 
         // check if it has hit the ground
-        if (yPosition >= (groundPosition - diameter) && ySpeed > 0) {
+        if (yPosition >= (groundPosition - diameter)) {
             yPosition = (int)(groundPosition - diameter);
-            ySpeed = -ySpeed + ballDegradation; 
+            ySpeed = -ySpeed; 
         }
         
         // check if it has hit the roof
-        if (yPosition >= (roofPosition - diameter) && ySpeed > 0) {
+        if (yPosition <= (roofPosition - diameter)) {
             yPosition = (int)(roofPosition - diameter);
-            ySpeed = -ySpeed + ballDegradation; 
+            ySpeed = -ySpeed; 
         }
 
         // check if it has hit the left wall
         if (xPosition >= (leftPosition - diameter) && xSpeed > 0) {
             xPosition = (int)(leftPosition - diameter);
-            xSpeed = -xSpeed + ballDegradation; 
+            xSpeed = -xSpeed; 
         }
         
         // check if it has hit the right wall
-        if (xPosition >= (rightPosition - diameter) && xSpeed > 0) {
+        if (xPosition <= (rightPosition - diameter) && xSpeed > 0) {
             xPosition = (int)(rightPosition - diameter);
-            xSpeed = -xSpeed + ballDegradation; 
+            xSpeed = -xSpeed; 
         }
 
         // draw again at new position

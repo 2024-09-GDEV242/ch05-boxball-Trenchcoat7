@@ -49,13 +49,13 @@ public class BallDemo
         myCanvas.drawLine(550, ground, 550, roof);
 
         // create and show the balls
-        BouncingBall ball = new BouncingBall(50, 50, 16, Color.BLUE, ground, roof, left, right, myCanvas);
+        BouncingBall ball = new BouncingBall(100, 150, 50, Color.BLUE, ground, roof, left, right, myCanvas);
         ball.draw();
         BouncingBall ball2 = new BouncingBall(70, 80, 20, Color.YELLOW, ground, roof, left, right, myCanvas);
         ball2.draw();
         BouncingBall ball3 = new BouncingBall(60, 80, 20, Color.RED, ground, roof, left, right, myCanvas);
         ball2.draw();
-        BouncingBall ball4 = new BouncingBall(70, 50, 110, Color.GREEN, ground, roof, left, right, myCanvas);
+        BouncingBall ball4 = new BouncingBall(70, 50, 20, Color.GREEN, ground, roof, left, right, myCanvas);
         ball2.draw();
         BouncingBall ball5 = new BouncingBall(70, 80, 100, Color.BLACK, ground, roof, left, right, myCanvas);
         ball2.draw();
